@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPlant: 1
   AttackDelay: 1
+  Damage: 30
+  EnemyPlant: 1
   Enemytype1: 0
   Enemytype2: 0
   Enemytype3: 0

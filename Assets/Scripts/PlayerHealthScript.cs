@@ -6,6 +6,7 @@ public class PlayerHealthScript : MonoBehaviour
 {
 
     public int health = 100;
+    public GameObject player;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerHealthScript : MonoBehaviour
     {
         if (health <= 0)
         {
-            print("dead");
+            Destroy(player);
         }
     }
 }

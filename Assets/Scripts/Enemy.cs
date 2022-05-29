@@ -5,12 +5,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private PlayerHealthScript healthscript;
-
+    private Rigidbody2D rb;
+    private float timer = 0.0f;
+    private bool canAttack = false;
     private bool SeenPlayer;
     private Vector2 TargetLocation;
-    private Rigidbody2D rb;
     private Vector2 movement;
+   
+
     public float AttackDelay;
+    public int Damage;
+    
 
 
     public bool EnemyPlant;
@@ -45,7 +50,10 @@ public class Enemy : MonoBehaviour
     {
         if (EnemyPlant)
         {
-            
+            if (canAttack)
+            {
+                attack();
+            }
         }
         if (Enemytype1)
         {
@@ -57,34 +65,37 @@ public class Enemy : MonoBehaviour
         
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {        
         if(collision.tag == "Player")
         {
-            if (EnemyPlant)
-            {
-                AttackDelay = AttackDelay - Time.deltaTime;
-                if (AttackDelay <= 0)
-                {
-                    healthscript.health = healthscript.health - 20;
-                    print(healthscript.health);
-                }
-            }
-            if (Enemytype1)
-            {
-                Vector3 direction = player.position - transform.position;
-                direction.Normalize();
-                movement = direction;
-                moveEnemy(movement);
-            }
+            canAttack = true;
+        } 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            canAttack = false;
         }
-        
-        
     }
 
     void moveEnemy(Vector2 direction)
     {
 
         rb.MovePosition((Vector2)transform.position + (direction * Speed * Time.deltaTime));
+    }
+
+    void attack()
+    {
+        timer += Time.deltaTime;
+        if (timer > AttackDelay)
+        {
+            healthscript.health = healthscript.health - Damage;
+            print(healthscript.health);
+
+            timer = 0.0f;
+        }
     }
 }

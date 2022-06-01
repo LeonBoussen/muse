@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D coll;
     public SpriteRenderer sprite;
     private Animator anim;
+    private PlayerAttack attack_script;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -15,14 +16,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
-    private enum MovementState { Player_Idle, Player_Run, jumping, falling }
+    private enum MovementState { Player_Idle, Player_Run, Player_Jump, falling }
 
     // Start is called before the first frame update
     private void Start()
     {
+        attack_script = gameObject.GetComponent<PlayerAttack>();
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -39,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        UpdateAnimationState();
+        if (!attack_script.isCoolDown)
+        {
+            UpdateAnimationState();
+        }
     }
 
     private void UpdateAnimationState()
@@ -63,9 +69,9 @@ public class PlayerMovement : MonoBehaviour
             cur_state = MovementState.Player_Idle;
         }
 
-        if (rb.velocity.y > .1f)
+        if (rb.velocity.y > 2.2f)
         {
-            //state = MovementState.jumping;
+            cur_state = MovementState.Player_Jump;
         }
         else if (rb.velocity.y < -.1f)
         {
@@ -74,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         anim.Play(cur_state.ToString());
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }

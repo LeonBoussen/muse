@@ -42,7 +42,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         healthscript = FindObjectOfType<PlayerHealthScript>();
-        healthscript.health = healthscript.health - 1;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -67,9 +66,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {        
-        if(collision.tag == "Player")
+        if(gameObject.CompareTag("Player"))
         {
-            canAttack = true;
+            if (EnemyPlant)
+            {
+                canAttack = true;
+            }
+
+            if (Enemytype1)
+            {
+                moveEnemy(player.transform.position);
+            }
         } 
     }
 

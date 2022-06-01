@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackDelay: 0
+  Damage: 0
   EnemyPlant: 0
   Enemytype1: 1
   Enemytype2: 0
@@ -107,7 +109,7 @@ MonoBehaviour:
   Enemytype4: 0
   Enemytype5: 0
   Speed: 1
-  player: {fileID: 0}
+  player: {fileID: 7081921966450802009, guid: bc6937d8c4c9074488d85293dedbb29c, type: 3}
 --- !u!58 &2352926731214257757
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +120,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

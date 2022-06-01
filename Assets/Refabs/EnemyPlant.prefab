@@ -123,4 +123,4 @@ MonoBehaviour:
   Enemytype4: 0
   Enemytype5: 0
   Speed: 100
-  player: {fileID: 0}
+  player: {fileID: 7081921966450802009, guid: bc6937d8c4c9074488d85293dedbb29c, type: 3}

@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
     private bool SeenPlayer;
     private Vector2 TargetLocation;
     private Vector2 movement;
-   
-
+    public float enemyhealth;
+    private bool haddied = false;
     public float AttackDelay;
     public int Damage;
     
@@ -47,6 +47,10 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (enemyhealth <= 0 && !haddied)
+        {
+            Die();
+        }
         if (EnemyPlant)
         {
             if (canAttack)
@@ -66,7 +70,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {        
-        if(gameObject.CompareTag("Player"))
+        if(collision.CompareTag("Player"))
         {
             if (EnemyPlant)
             {
@@ -104,5 +108,13 @@ public class Enemy : MonoBehaviour
 
             timer = 0.0f;
         }
+    }
+    public void TakeDamage(float amount)
+    {
+        enemyhealth -= amount;
+    }
+    private void Die()
+    {
+        Destroy(this.gameObject);
     }
 }

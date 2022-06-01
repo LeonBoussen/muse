@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D coll;
     public SpriteRenderer sprite;
-    //private Animator anim;
+    private Animator anim;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -15,14 +15,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { Player_Idle, Player_Run, jumping, falling }
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,39 +35,43 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
+        
+    }
+    private void FixedUpdate()
+    {
         UpdateAnimationState();
     }
 
     private void UpdateAnimationState()
     {
-        MovementState state;
 
+        MovementState cur_state = new MovementState();
+        if (dirX > 0f || dirX < 0f)
+        {
+            cur_state = MovementState.Player_Run;
+        }
         if (dirX > 0f)
         {
-            state = MovementState.running;
-            sprite.flipX = true;
+            sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
-            state = MovementState.running;
-            sprite.flipX = false;
+            sprite.flipX = true;
         }
         else
         {
-            state = MovementState.idle;
+            cur_state = MovementState.Player_Idle;
         }
 
         if (rb.velocity.y > .1f)
         {
-            state = MovementState.jumping;
+            //state = MovementState.jumping;
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.falling;
+            //cur_state = MovementState.falling;
         }
-        
-        //anim.SetInteger("state", (int)state);
+        anim.Play(cur_state.ToString());
     }
 
     private bool IsGrounded()

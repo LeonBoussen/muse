@@ -17,8 +17,12 @@ public class PlayerHealthScript : MonoBehaviour
     {
         if (health <= 0 && !hasdied)
         {
-            Destroy(player);
-            hasdied = true;
+            Die();
         }
+    }
+    public void Die()
+    {
+        Destroy(player);
+        hasdied = true;
     }
 }

@@ -12,7 +12,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2001
   stringTagMap: {}
@@ -48,13 +48,13 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 1
     - _RefractionAmount: 0
-    - _ShorelineLength: 32.12
+    - _ShorelineLength: 131.3
     m_Colors:
     - _CausticMovement: {r: 1, g: 1, b: 0, a: 0}
     - _CausticSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _CausticsColor: {r: 0.0085439505, g: 0.6037736, b: 0.4179037, a: 0.5019608}
     - _Color: {r: 0.07762803, g: 0.2264151, b: 0, a: 0.36078432}
-    - _ShorelineColor: {r: 0, g: 1, b: 0.2688694, a: 1}
+    - _ShorelineColor: {r: 0.20310758, g: 0.5754717, b: 0, a: 1}
     - _Water_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Water_Tiling: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

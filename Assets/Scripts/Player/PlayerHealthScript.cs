@@ -6,10 +6,11 @@ public class PlayerHealthScript : MonoBehaviour
 {
     public int health = 100;
     public GameObject player;
-    private bool hasdied = false;
+    public bool hasdied = false;
+    private UI ui_script;
     void Start()
     {
-        
+        ui_script = FindObjectOfType<UI>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class PlayerHealthScript : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(player);
+        ui_script.DeathScreen();
         hasdied = true;
     }
 }

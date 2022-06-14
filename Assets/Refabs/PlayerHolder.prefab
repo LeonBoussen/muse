@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 7081921966450802009}
   - component: {fileID: 7081921966450802008}
   - component: {fileID: 7081921966450802015}
-  - component: {fileID: 7081921966450802014}
   - component: {fileID: 2580785236501923597}
   m_Layer: 0
   m_Name: PlayerHolder
@@ -108,22 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &7081921966450802014
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7081921966450802010}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
 --- !u!114 &2580785236501923597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe03bc2c3330d949a314a00dc03530b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  player: {fileID: 0}
+  hasdied: 0
 --- !u!1 &7081921966768658611
 GameObject:
   m_ObjectHideFlags: 0

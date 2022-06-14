@@ -9,21 +9,22 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer sprite;
     private Animator anim;
     private PlayerAttack attack_script;
+    public GameObject groundcheck;
 
     [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
-
-    private enum MovementState { Player_Idle, Player_Run, Player_Jump, falling }
+    private bool override_anim = true;
+    private enum MovementState { Player_Idle, Player_Run, Player_Jump, Player_Fall }
 
     // Start is called before the first frame update
     private void Start()
     {
         attack_script = gameObject.GetComponent<PlayerAttack>();
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<CapsuleCollider2D>();
+        coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
 
     }
@@ -32,13 +33,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        
+        if (!IsGrounded())
+        {
+            override_anim = false;
+        }
+        else
+        {
+            override_anim = true;
+        }
+        print(rb.velocity.y);
     }
     private void FixedUpdate()
     {
@@ -46,15 +53,16 @@ public class PlayerMovement : MonoBehaviour
         {
             UpdateAnimationState();
         }
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        
     }
 
     private void UpdateAnimationState()
     {
-
         MovementState cur_state = new MovementState();
         if (dirX > 0f || dirX < 0f)
         {
-            cur_state = MovementState.Player_Run;
+            cur_state = MovementState.Player_Run; // run
         }
         if (dirX > 0f)
         {
@@ -68,20 +76,41 @@ public class PlayerMovement : MonoBehaviour
         {
             cur_state = MovementState.Player_Idle;
         }
-
-        if (rb.velocity.y > 2.2f)
+        if (rb.velocity.y > 4f)
         {
             cur_state = MovementState.Player_Jump;
         }
-        else if (rb.velocity.y < -.1f)
+        else if (rb.velocity.y < -.2f && !IsGrounded())
         {
-            //cur_state = MovementState.falling;
+            cur_state = MovementState.Player_Fall;
         }
-        anim.Play(cur_state.ToString());
+        PlayAnim(cur_state.ToString());
     }
 
     public bool IsGrounded()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+        return Physics2D.Raycast(groundcheck.transform.position, Vector2.down, .15f, jumpableGround);
     }
+    void PlayAnim(string animation)
+    {
+        if (!override_anim)
+        {
+            if (!animation.Contains("Player_Fall") || animation.Contains("Player_Jump"))
+            {
+                return;
+            }
+            else
+            {
+                anim.Play(animation);
+            }
+        }
+        else
+        {
+            anim.Play(animation);
+        }
+        
+
+
+    }
+    
 }

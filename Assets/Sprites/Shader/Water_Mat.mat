@@ -14,14 +14,18 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2001
+  m_CustomRenderQueue: 2451
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Input_Texture:
+        m_Texture: {fileID: 2800000, guid: 77a32b5f2289c8e49a797323a67c1922, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Render:
-        m_Texture: {fileID: 8400000, guid: 263ece253860f8646a5ab283878b2df5, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Render_Texture:
@@ -43,20 +47,23 @@ Material:
     m_Ints: []
     m_Floats:
     - _CCausticMovement: 1
-    - _CausticScale: 10
-    - _CausticsPower: 1
+    - _CausticScale: 18.12
+    - _CausticsPower: 0
+    - _CellDensity: 23.91
+    - _Cell_Speed: 0.04
     - _QueueControl: 0
     - _QueueOffset: 1
-    - _RefractionAmount: 0
-    - _ShorelineLength: 131.3
+    - _RefractionAmount: -0.003
+    - _ShorelineLength: 43.3
     m_Colors:
     - _CausticMovement: {r: 1, g: 1, b: 0, a: 0}
-    - _CausticSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
-    - _CausticsColor: {r: 0.0085439505, g: 0.6037736, b: 0.4179037, a: 0.5019608}
-    - _Color: {r: 0.07762803, g: 0.2264151, b: 0, a: 0.36078432}
-    - _ShorelineColor: {r: 0.20310758, g: 0.5754717, b: 0, a: 1}
+    - _CausticSpeed: {r: 0.05, g: 0.01, b: 0, a: 0}
+    - _CausticsColor: {r: 0.011614448, g: 0.2735849, b: 0.19258088, a: 0.5019608}
+    - _Color: {r: 0.5292872, g: 0.6226415, b: 0.502225, a: 0.36078432}
+    - _ShorelineColor: {r: 0.24056605, g: 0.9622642, b: 0, a: 1}
+    - _Tiling: {r: 2.82, g: 1, b: 0, a: 0}
     - _Water_Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Water_Tiling: {r: 0, g: 0, b: 0, a: 0}
+    - _Water_Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &50867494042284335
 MonoBehaviour:

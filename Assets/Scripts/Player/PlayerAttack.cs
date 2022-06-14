@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Update()
     {
-        if (!isCoolDown && Input.GetMouseButtonDown(0))
+        if (!isCoolDown && Input.GetButton("Fire1"))
         {
             Attack();
             StartCoroutine(CoolDown(0.5f));
@@ -29,6 +29,16 @@ public class PlayerAttack : MonoBehaviour
     {
         if (movementscript.IsGrounded())
         {
+            var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+            /*
+            if (Input.mousePosition.x < playerScreenPoint.x)
+            {
+                movementscript.sprite.flipX = true;
+            }
+            else
+            {
+                movementscript.sprite.flipX = false;
+            }*/
             anim.Play("Player_Attack");
             Collider2D[] hitenemies = Physics2D.OverlapCircleAll(attackpoint.transform.position, range, enemylayer);
             foreach (Collider2D enemy in hitenemies)

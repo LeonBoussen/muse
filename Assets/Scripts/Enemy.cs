@@ -24,23 +24,22 @@ public class Enemy : MonoBehaviour
     public bool Enemytype1;
 
 
-    public bool Enemytype2;
+    public bool BeefSteak;
 
 
-    public bool Enemytype3;
+    public bool Hollorch;
 
 
-    public bool Enemytype4;
-
-
-    public bool Enemytype5;
+    public bool Cactricry;
 
 
     public float Speed;
-    public Transform player;
+    private Transform player;
 
     void Start()
     {
+        player = GameObject.Find("PlayerHolder").transform;
+
         healthscript = FindObjectOfType<PlayerHealthScript>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -51,35 +50,57 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-        if (EnemyPlant)
+
+        if (canAttack)
         {
-            if (canAttack)
-            {
-                attack();
-            }
+            attack();
         }
-        if (Enemytype1)
+        if (BeefSteak)
         {
             
         }
     }
     private void FixedUpdate()
     {
-        
+        if (BeefSteak)
+        {
+            float y = transform.position.y;
+            Vector3 pos = Vector3.MoveTowards(transform.position, player.position, Speed * Time.deltaTime);
+            pos.y = y + 0.040f;
+            transform.position = pos;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {        
         if(collision.CompareTag("Player"))
         {
+            canAttack = true;
+
             if (EnemyPlant)
             {
-                canAttack = true;
+                
             }
 
             if (Enemytype1)
             {
+                
                 moveEnemy(player.transform.position);
+            }
+
+            if (BeefSteak)
+            {
+                
+            }
+
+            if (Hollorch)
+            {
+                
+            }
+
+            if (Cactricry)
+            {
+                
             }
         } 
     }

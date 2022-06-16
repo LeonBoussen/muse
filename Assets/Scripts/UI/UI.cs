@@ -183,6 +183,7 @@ public class UI : MonoBehaviour
         player_movement.enabled = false;
         player_attack.enabled = false;
         player_movement.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        player_movement.rb.freezeRotation = true;
     }
     private void SetOutline(bool isPauseMenu)
     {

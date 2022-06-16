@@ -1,4 +1,4 @@
-## [W.I.P]
+# Florant
 Project team:
 
 ### Devs
@@ -17,10 +17,10 @@ Project team:
 
 
 Platform:
-[jullie platfom]
+PC
 
 ### Korte omschrijving van de game
-W.I.P
+Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en chemicaliën. Je kan met de player rond lopen en in de levels zijn er enemies die je moet verslaan om de level te halen
 
 ---
 #### Producten Werkproces 1
@@ -51,12 +51,12 @@ W.I.P
 | Asset planning (pdf)                  | [AssetPlanning]
 |<img width=500/>|<img width=300/>|
 
-   [Backlog]: <>
+   [Backlog]: <https://trello.com/b/I1SIPGEh/muse>
    [Logboek]: <>
-   [GameDesignDoc]: <>
+   [GameDesignDoc]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Game%20Design%20Document%20Muse.docx>
    [RetrospectiveVerslagen]: <>
    [ReviewVerslagen]: <>
-   [Prototype]: <https://www.mijnmytheprototype.nl>
+   [Prototype]: <>
    [Folder op teams]: <>
    [AssetPlanning]: <>
    

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 422269844603800019}
   - component: {fileID: 882697309492431924}
   - component: {fileID: 1265747987090269586}
+  - component: {fileID: 3711419130225171214}
   m_Layer: 7
   m_Name: BeefSteak
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   enemyhealth: 100
+  hasdied: 0
   AttackDelay: 3
   jumpheight: 0.01
   Damage: 40
@@ -132,6 +135,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 4266a796f42fd1f4ab5321d0ef1316ee, type: 2}
   - {fileID: 7400000, guid: 44483b2751069824b9414d2aecd06842, type: 2}
   - {fileID: 7400000, guid: 624667274ed1d034fa8ec21ea97970b3, type: 2}
+  - {fileID: 7400000, guid: 88d1a7e9ad496414bb7725973e9b3347, type: 2}
   current_enemytype: 2
   Speed: 1
 --- !u!50 &882697309492431924
@@ -175,6 +179,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &3711419130225171214
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422269844603800020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4319849, y: 0.6171231}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.74, y: 10.8}
+    newSize: {x: 2.3, y: 2.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.049866, y: 12.15767}
+  m_EdgeRadius: 0
 --- !u!1 &2988530076424751514
 GameObject:
   m_ObjectHideFlags: 0

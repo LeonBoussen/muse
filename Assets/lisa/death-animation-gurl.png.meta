@@ -1,0 +1,722 @@
+fileFormatVersion: 2
+guid: c94900d8f4d9e7f49a1c9ff9751a5eac
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: death-animation-gurl_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 687
+        width: 220
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a677fd1a4df9f344bbc31dc079f0e907
+      internalID: 133333974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_1
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 708
+        width: 244
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7104e571f893054f981476d4651882a
+      internalID: 490434730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_2
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 712
+        width: 262
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e26e0cc913b4940869197981d3ef86
+      internalID: 1759799732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_3
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 717
+        width: 248
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b263bbb43f7b980429887d5c78f623fb
+      internalID: 727388833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_36
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 712
+        width: 269
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8153aa6024736c540be3487e70320b1c
+      internalID: -458166627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 699
+        width: 307
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a49fa3506fac2f4fb8a8a73b703ae79
+      internalID: 1782309391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_98
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 440
+        width: 307
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a961d7fd11e7444a89567b8396ee25
+      internalID: 1681790816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_127
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 440
+        width: 335
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee13ee382c05dc4b8d2dddd02cef74e
+      internalID: 1672104970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_134
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 410
+        width: 335
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b81540bb908aeb4083e34e987d6ff0f
+      internalID: -1887416081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_148
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 400
+        width: 335
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8099158b787b1fd4c88761ef2c8d1dda
+      internalID: -1857152991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_168
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 208
+        width: 335
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801158f436d3eba40a273e7ef8a913da
+      internalID: -380890900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_169
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 230
+        width: 335
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04e446d4f4f97342b95e8d17a857552
+      internalID: 1060984187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_180
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 220
+        width: 335
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055325a5d8ed5af418968fe0aaf4130d
+      internalID: 1053198386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_184
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 200
+        width: 333
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f285fbcbca1f174469a261616ef0fd69
+      internalID: 1234654839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_188
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 200
+        width: 333
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e533c649bfbc744982e449c8b8abcb
+      internalID: 745253789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_193
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 47
+        width: 335
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b942452cffb7c764188f975311e87066
+      internalID: -849363268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_198
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 30
+        width: 333
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bcf0bbc361c484f9a8dd64e27b2a15
+      internalID: 1385216891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_199
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 25
+        width: 335
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1992815d27023374ca809cc9b4807430
+      internalID: -1308884664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death-animation-gurl_200
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 16
+        width: 334
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8951c7a3041558246924d77b988a06fc
+      internalID: 1555795007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      death-animation-gurl_33: 1083528733
+      death-animation-gurl_118: -2051362429
+      death-animation-gurl_180: 1053198386
+      death-animation-gurl_21: 465763731
+      death-animation-gurl_82: -790957194
+      death-animation-gurl_111: -1902280721
+      death-animation-gurl_48: 1810030039
+      death-animation-gurl_11: 1637111042
+      death-animation-gurl_188: 745253789
+      death-animation-gurl_101: 1720262054
+      death-animation-gurl_39: 1311642027
+      death-animation-gurl_175: 570894610
+      death-animation-gurl_74: -787191716
+      death-animation-gurl_162: -1395996690
+      death-animation-gurl_37: -919467528
+      death-animation-gurl_187: -344367719
+      death-animation-gurl_120: -1519863324
+      death-animation-gurl_7: 14866534
+      death-animation-gurl_77: 1905073169
+      death-animation-gurl_179: 1461616787
+      death-animation-gurl_102: -165541744
+      death-animation-gurl_57: 944416237
+      death-animation-gurl_154: 257132856
+      death-animation-gurl_10: -127378346
+      death-animation-gurl_75: 1396099724
+      death-animation-gurl_106: 699507315
+      death-animation-gurl_132: 994134416
+      death-animation-gurl_38: 36791372
+      death-animation-gurl_24: -691106298
+      death-animation-gurl_103: -1965433870
+      death-animation-gurl_88: -308964699
+      death-animation-gurl_63: -721212045
+      death-animation-gurl_190: -2136631865
+      death-animation-gurl_191: 1929926120
+      death-animation-gurl_5: 2118008676
+      death-animation-gurl_159: 1480854587
+      death-animation-gurl_128: -1471952425
+      death-animation-gurl_64: -253984098
+      death-animation-gurl_55: 16957362
+      death-animation-gurl_153: -790408469
+      death-animation-gurl_62: 673197724
+      death-animation-gurl_44: -357816227
+      death-animation-gurl_145: 581808981
+      death-animation-gurl_6: 451468929
+      death-animation-gurl_43: 1726833142
+      death-animation-gurl_23: 2069490295
+      death-animation-gurl_8: 2109740825
+      death-animation-gurl_143: 291493095
+      death-animation-gurl_165: -607644394
+      death-animation-gurl_70: -109550140
+      death-animation-gurl_95: 1660411377
+      death-animation-gurl_130: -327067654
+      death-animation-gurl_155: -2011109433
+      death-animation-gurl_17: 1405470428
+      death-animation-gurl_3: 727388833
+      death-animation-gurl_31: 248416148
+      death-animation-gurl_47: 1782309391
+      death-animation-gurl_171: -1470445517
+      death-animation-gurl_200: 1555795007
+      death-animation-gurl_49: 1923845231
+      death-animation-gurl_129: -231958329
+      death-animation-gurl_86: -309416063
+      death-animation-gurl_197: -1841611285
+      death-animation-gurl_126: 1717571805
+      death-animation-gurl_50: 2082082221
+      death-animation-gurl_105: 47295939
+      death-animation-gurl_72: -1185157179
+      death-animation-gurl_51: 109960411
+      death-animation-gurl_136: -927647799
+      death-animation-gurl_182: 1221783742
+      death-animation-gurl_12: 1880811048
+      death-animation-gurl_28: -1807058043
+      death-animation-gurl_110: 1374183152
+      death-animation-gurl_150: -1328166597
+      death-animation-gurl_176: -383858595
+      death-animation-gurl_124: 596291922
+      death-animation-gurl_123: 1986745648
+      death-animation-gurl_140: -603953764
+      death-animation-gurl_163: -656253317
+      death-animation-gurl_195: 2030172907
+      death-animation-gurl_78: -786149426
+      death-animation-gurl_61: 9198523
+      death-animation-gurl_199: -1308884664
+      death-animation-gurl_169: 1060984187
+      death-animation-gurl_152: 1587155841
+      death-animation-gurl_113: 122404061
+      death-animation-gurl_181: -1928758899
+      death-animation-gurl_36: -458166627
+      death-animation-gurl_100: 1402522374
+      death-animation-gurl_119: 1236778797
+      death-animation-gurl_186: 1925279320
+      death-animation-gurl_26: 274047970
+      death-animation-gurl_172: 759859944
+      death-animation-gurl_94: 1469272602
+      death-animation-gurl_107: -123285792
+      death-animation-gurl_138: 2084352675
+      death-animation-gurl_193: -849363268
+      death-animation-gurl_122: -2053041340
+      death-animation-gurl_133: -1467161285
+      death-animation-gurl_115: -1931422491
+      death-animation-gurl_91: 1965195365
+      death-animation-gurl_164: 264282480
+      death-animation-gurl_32: 1068550467
+      death-animation-gurl_151: 937620503
+      death-animation-gurl_81: 117699606
+      death-animation-gurl_27: 764666850
+      death-animation-gurl_156: 269391915
+      death-animation-gurl_135: 1838108602
+      death-animation-gurl_144: 1707046441
+      death-animation-gurl_189: -1578139355
+      death-animation-gurl_198: 1385216891
+      death-animation-gurl_15: -427142570
+      death-animation-gurl_2: 1759799732
+      death-animation-gurl_13: 879012767
+      death-animation-gurl_80: 852338930
+      death-animation-gurl_76: -475654183
+      death-animation-gurl_56: -1107743317
+      death-animation-gurl_18: 173921832
+      death-animation-gurl_116: 303920237
+      death-animation-gurl_174: 461077295
+      death-animation-gurl_68: -1184994818
+      death-animation-gurl_19: 1268579523
+      death-animation-gurl_170: 514992482
+      death-animation-gurl_137: 324561479
+      death-animation-gurl_131: 312045837
+      death-animation-gurl_99: 2126626448
+      death-animation-gurl_65: -1798125978
+      death-animation-gurl_147: 916765882
+      death-animation-gurl_117: -183229591
+      death-animation-gurl_192: -1304151751
+      death-animation-gurl_166: -768395919
+      death-animation-gurl_173: 595501887
+      death-animation-gurl_114: 939966449
+      death-animation-gurl_16: -1026005847
+      death-animation-gurl_14: -652441008
+      death-animation-gurl_183: -1146698833
+      death-animation-gurl_184: 1234654839
+      death-animation-gurl_108: 1206090325
+      death-animation-gurl_109: 2010573271
+      death-animation-gurl_20: -378395510
+      death-animation-gurl_79: -451804368
+      death-animation-gurl_97: 459314975
+      death-animation-gurl_141: 1252542898
+      death-animation-gurl_40: -1958388031
+      death-animation-gurl_104: 1383415590
+      death-animation-gurl_54: 792741506
+      death-animation-gurl_59: -1902065623
+      death-animation-gurl_42: -2125405268
+      death-animation-gurl_177: 1021506067
+      death-animation-gurl_121: -927055584
+      death-animation-gurl_157: -854594614
+      death-animation-gurl_149: 1626535974
+      death-animation-gurl_194: -958473445
+      death-animation-gurl_53: 1378212027
+      death-animation-gurl_25: -2014294961
+      death-animation-gurl_196: 843743945
+      death-animation-gurl_0: 133333974
+      death-animation-gurl_34: 1321642671
+      death-animation-gurl_9: 1057020123
+      death-animation-gurl_185: 989048456
+      death-animation-gurl_83: -717954039
+      death-animation-gurl_96: -1994944253
+      death-animation-gurl_85: -1470238311
+      death-animation-gurl_125: -457765579
+      death-animation-gurl_89: 272182325
+      death-animation-gurl_112: -924496807
+      death-animation-gurl_22: 2091068169
+      death-animation-gurl_58: -1648489779
+      death-animation-gurl_45: 40775290
+      death-animation-gurl_146: -616254663
+      death-animation-gurl_1: 490434730
+      death-animation-gurl_52: 235893675
+      death-animation-gurl_92: -1070357305
+      death-animation-gurl_60: 607347250
+      death-animation-gurl_46: -553138365
+      death-animation-gurl_148: -1857152991
+      death-animation-gurl_69: 90548046
+      death-animation-gurl_67: -350031548
+      death-animation-gurl_168: -380890900
+      death-animation-gurl_73: 2001672329
+      death-animation-gurl_30: 1504933760
+      death-animation-gurl_134: -1887416081
+      death-animation-gurl_98: 1681790816
+      death-animation-gurl_161: -2071005
+      death-animation-gurl_71: 157564402
+      death-animation-gurl_142: -437330678
+      death-animation-gurl_41: -295899580
+      death-animation-gurl_29: 1309060203
+      death-animation-gurl_66: 1627691533
+      death-animation-gurl_4: 657322236
+      death-animation-gurl_93: -1661370432
+      death-animation-gurl_167: 1754643402
+      death-animation-gurl_158: 1369419508
+      death-animation-gurl_84: -1776303139
+      death-animation-gurl_90: -101452246
+      death-animation-gurl_87: -1823102175
+      death-animation-gurl_178: -1149739607
+      death-animation-gurl_139: -860098210
+      death-animation-gurl_127: 1672104970
+      death-animation-gurl_160: 688826633
+      death-animation-gurl_35: -1371219951
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

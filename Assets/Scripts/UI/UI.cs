@@ -163,15 +163,17 @@ public class UI : MonoBehaviour
     }
     IEnumerator EnableDeathUI()
     {
-        
+        FindObjectOfType<HUD_Script>().HealthSlider.transform.parent.gameObject.SetActive(false);
         SlowDownTime();
         DeathBackground.SetActive(true);
-        anim.Play("Death_Fade_In");
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.01f);
+        anim.Play("Death_Background_Fade_In");
+        yield return new WaitForSecondsRealtime(3f);
         FreezePlayer();
         outline.SetActive(true);
         DeathUI.SetActive(true);
         SetOutline(false);
+        yield return new WaitForSecondsRealtime(0.01f);
         anim.Play("Death_UI_Fade_In");
     }
     public void Quit()
@@ -180,7 +182,6 @@ public class UI : MonoBehaviour
     }
     private void FreezePlayer()
     {
-        player_movement.enabled = false;
         player_attack.enabled = false;
         player_movement.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         player_movement.rb.freezeRotation = true;

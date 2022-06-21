@@ -11,24 +11,26 @@ public class PlayerCheck : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.CompareTag("Enemy"))
+        {
+            return;
+        }
         if (col.CompareTag("Player"))
         {
             enemy_script.isMoving = true;
         }
+        
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
         if (col.CompareTag("Enemy"))
         {
             return;
         }
-    }
-    private void OnTriggerExit2D(Collider2D col)
-    {
         if (col.CompareTag("Player"))
         {
             enemy_script.isMoving = false;
         }
-        if (col.CompareTag("Enemy"))
-        {
-            return;
-        }
+        
     }
 }

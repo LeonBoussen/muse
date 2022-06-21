@@ -115,16 +115,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   enemyhealth: 50
   AttackDelay: 0.5
+  jumpheight: 0
   Damage: 10
-  EnemyPlant: 1
-  Enemytype1: 0
-  BeefSteak: 0
-  Hollorch: 0
-  Cactricry: 0
+  attack_collider: {fileID: 0}
+  collision_collider: {fileID: 0}
+  sprite: {fileID: 0}
+  isMoving: 0
+  Animations: []
+  current_enemytype: 0
   Speed: 100
-  player: {fileID: 0}
 --- !u!1 &2463376414844007480
 GameObject:
   m_ObjectHideFlags: 0

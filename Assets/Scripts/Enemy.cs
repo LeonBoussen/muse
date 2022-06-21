@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public float timer = 0.0f;
     private bool canAttack = false;
     public float enemyhealth;
-    private bool hasdied = false;
+    public bool hasdied = false;
     public float AttackDelay;
     public float jumpheight;
     public int Damage;
@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     public bool isMoving = false;
     private bool overideanimation = false;
+    private bool Morphed = false;
 
     public AnimationClip[] Animations;
     public enum enemytype
@@ -51,16 +52,16 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (enemyhealth <= 0 && !hasdied)
+        if (enemyhealth <= 0 && !this.hasdied)
         {
             Die();
-            hasdied = true;
+            this.hasdied = true;
         }
-        if (canAttack)
+        if (canAttack && !hasdied)
         {
             attack();
         }
-        if (!hasdied)
+        if (!this.hasdied)
         {
             if (isMoving)
             {
@@ -84,7 +85,7 @@ public class Enemy : MonoBehaviour
     {
         if (transform.position.x > player.transform.position.x)
         {
-            if (!hasdied)
+            if (!this.hasdied)
             {
                 sprite.flipX = false;
             }
@@ -92,7 +93,7 @@ public class Enemy : MonoBehaviour
         }  
         else if (transform.position.x < player.transform.position.x)
         {
-            if (!hasdied)
+            if (!this.hasdied)
             {
                 sprite.flipX = true;
             }
@@ -109,17 +110,32 @@ public class Enemy : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
-        if(collision.CompareTag("Player"))
+    {   
+        if (this.hasdied)
         {
-            canAttack = true;
-        } 
+            return;
+        }
+        else
+        {
+            if (collision.CompareTag("Player"))
+            {
+                canAttack = true;
+            }
+        }
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (this.hasdied)
         {
-            canAttack = false;
+            return;
+        }
+        else
+        {
+            if (collision.CompareTag("Player"))
+            {
+                canAttack = false;
+            }
         }
     }
 
@@ -143,11 +159,14 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(float amount)
     {
-        enemyhealth -= amount;
-        isMoving = false;
-        PlayAnimation(3);
-        StartCoroutine(MovingCooldown(.5f));
-        StartCoroutine(Anim_Cooldown());
+        if (!hasdied)
+        {
+            enemyhealth -= amount;
+            isMoving = false;
+            PlayAnimation(3);
+            StartCoroutine(MovingCooldown(.5f));
+            StartCoroutine(Anim_Cooldown());
+        }
     }
     private void Die()
     {
@@ -166,7 +185,7 @@ public class Enemy : MonoBehaviour
     }
     private void PlayAnimation(int animation_type) // 0 = idle |  1 = walk |  2 = attack |  3 = hurt | 4 = death | 5 = bloem animation
     {
-        if (animation_type == 2 || animation_type == 3 || animation_type == 4)
+        if (animation_type == 2 || animation_type == 3 || animation_type == 4 || animation_type == 5)
         {
             anim.Play(Animations[animation_type].name);
             overideanimation = true;
@@ -195,5 +214,26 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
         isMoving = true;
+    }
+    public IEnumerator Morph_Anim()
+    {
+        if (Morphed)
+        {
+            yield return null;
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(1f);
+            PlayAnimation(5);
+            PlayerHealthScript HealthScript = FindObjectOfType<PlayerHealthScript>();
+            float a = HealthScript.health + 5;
+            if (a < 105)
+            {
+                HealthScript.health += 5;
+            }
+            Morphed = true;
+        }
+        
+        
     }
 }

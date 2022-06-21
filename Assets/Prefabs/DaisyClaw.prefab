@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 5144079899892736100}
   m_Layer: 7
   m_Name: DaisyClaw
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,9 +150,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.7132287}
+  m_Offset: {x: 0.94508266, y: -1.7132287}
   serializedVersion: 2
-  m_Radius: 4.2619195
+  m_Radius: 3.3168373
 --- !u!114 &5994170514871094309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  enemyhealth: 100
+  timer: 0.75
+  enemyhealth: 40
+  hasdied: 0
   AttackDelay: 1
   jumpheight: 0.01
   Damage: 15
@@ -180,6 +181,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 2c305a762a0585f4381b9eed72f84b6f, type: 2}
   - {fileID: 7400000, guid: b43786c8780ed1b469b69e270bbe03bf, type: 2}
   - {fileID: 7400000, guid: c9842700876c6194ab8488d12297fbf8, type: 2}
+  - {fileID: 7400000, guid: 7e139609dbad468418aef0d13b77141b, type: 2}
   current_enemytype: 4
   Speed: 0
 --- !u!50 &6542708787177212354

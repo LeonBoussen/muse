@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 7983391440349505318}
   m_Layer: 7
   m_Name: Cacticry
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,16 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   enemyhealth: 60
   AttackDelay: 0.1
+  jumpheight: 0
   Damage: 5
-  EnemyPlant: 0
-  Enemytype1: 0
-  BeefSteak: 0
-  Hollorch: 0
-  Cactricry: 1
+  attack_collider: {fileID: 0}
+  collision_collider: {fileID: 0}
+  sprite: {fileID: 0}
+  isMoving: 0
+  Animations: []
+  current_enemytype: 0
   Speed: 0
-  player: {fileID: 7081921966450802009, guid: bc6937d8c4c9074488d85293dedbb29c, type: 3}
 --- !u!58 &7983391440349505318
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -16,8 +16,6 @@ public class HUD_Script : MonoBehaviour
     {
         healthscript = FindObjectOfType<PlayerHealthScript>();
     }
-
-    
     private void OnGUI()
     {
         HealthSlider.value = healthscript.health;

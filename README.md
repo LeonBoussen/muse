@@ -20,7 +20,7 @@ Platform:
 PC
 
 ### Korte omschrijving van de game
-Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en chemicaliën. Je kan met de player rond lopen en in de levels zijn er enemies die je moet verslaan om de level te halen
+Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en chemicaliën. Je kan met de player rond lopen en in de level zijn er enemies die je moet verslaan om de level te halen
 
 ---
 #### Producten Werkproces 1
@@ -37,8 +37,8 @@ Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en 
 | Online Product backlog & Sprint backlog + DoD (Trello)    | [Backlog]
 | Sprint retrospective verslagen (pdf)                      | [RetrospectiveVerslagen]
 | Logboek (pdf)                                             | [Logboek]
-| Opnames sprint retrospectives (Teams opnames)             | [Folder op teams]
-| Opnames standups (Teams opnames)                          | [Folder op teams]
+| Opnames sprint retrospectives (logboek)             | [logboek]
+| Opnames standups (logboek)                          | [logboek]
 |<img width=500/>|<img width=300/>|
    
 #### Producten Werkproces 3
@@ -52,11 +52,10 @@ Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en 
 |<img width=500/>|<img width=300/>|
 
    [Backlog]: <https://trello.com/b/I1SIPGEh/muse>
-   [Logboek]: <>
-   [GameDesignDoc]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Game%20Design%20Document%20Muse.docx>
-   [RetrospectiveVerslagen]: <>
-   [ReviewVerslagen]: <>
-   [Prototype]: <>
-   [Folder op teams]: <>
-   [AssetPlanning]: <>
+   [Logboek]: <https://docs.google.com/document/d/1xSiogelaksRjjSInm0Ac0FjJyGwVzRekr1tUf6I5WW4/edit>
+   [GameDesignDoc]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/GAME_CONCEPT_DOCUMENT.docx>
+   [RetrospectiveVerslagen]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Gedocumenteerde_Sprint_Retrospective.docx>
+   [ReviewVerslagen]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Gedocumenteerde_Game_sprint_review.docx>
+   [Prototype]: <https://danielnijkamp.xyz/Builds/Muse.html>
+   [AssetPlanning]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Design_proces_en_ontwikkeling.docx>
    

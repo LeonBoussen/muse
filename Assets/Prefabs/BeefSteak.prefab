@@ -125,6 +125,7 @@ MonoBehaviour:
   AttackDelay: 3
   jumpheight: 0.01
   Damage: 40
+  animcooldown: 0.6
   attack_collider: {fileID: 422269844603800018}
   collision_collider: {fileID: 7952775329749212727}
   sprite: {fileID: 422269844603800017}
@@ -254,7 +255,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 27.2
+  m_Radius: 24
 --- !u!114 &528198846148660652
 MonoBehaviour:
   m_ObjectHideFlags: 0

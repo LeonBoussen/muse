@@ -202,12 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7427a990b9489fe43b99686262d6a58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  timer: 1
   enemyhealth: 20
   hasdied: 0
-  AttackDelay: 3
+  AttackDelay: 1
   jumpheight: 0.03
   Damage: 5
+  animcooldown: 0.5
   attack_collider: {fileID: 4376059206518620071}
   collision_collider: {fileID: 6285680930373216322}
   sprite: {fileID: 4376059206518620068}

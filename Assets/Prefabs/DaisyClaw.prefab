@@ -171,6 +171,7 @@ MonoBehaviour:
   AttackDelay: 1
   jumpheight: 0.01
   Damage: 15
+  animcooldown: 0.5
   attack_collider: {fileID: 5994170514871094308}
   collision_collider: {fileID: 4084282701694770113}
   sprite: {fileID: 5994170514871094311}

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float AttackDelay;
     public float jumpheight;
     public int Damage;
+    public float animcooldown;
 
     private Animator anim;
     public Collider2D attack_collider;
@@ -138,11 +139,10 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-
-    void moveEnemy(Vector2 direction)
+    /*void moveEnemy(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * Speed * Time.deltaTime));
-    }
+    }*/
 
     void attack()
     {
@@ -150,10 +150,10 @@ public class Enemy : MonoBehaviour
         if (timer > AttackDelay)
         {
             PlayAnimation(2);
-            healthscript.health = healthscript.health - Damage;
             isMoving = false;
             StartCoroutine(MovingCooldown(.5f));
             StartCoroutine(Anim_Cooldown());
+            StartCoroutine(DoDamage(.2f));
             timer = 0.0f;
         }
     }
@@ -207,7 +207,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator Anim_Cooldown()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(animcooldown);
         overideanimation = false;
     }
     IEnumerator MovingCooldown(float cooldown)
@@ -233,7 +233,10 @@ public class Enemy : MonoBehaviour
             }
             Morphed = true;
         }
-        
-        
+    }
+    IEnumerator DoDamage(float cooldown)
+    {
+        yield return new WaitForSeconds(cooldown);
+        healthscript.health = healthscript.health - Damage;
     }
 }

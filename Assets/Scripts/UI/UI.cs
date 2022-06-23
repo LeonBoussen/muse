@@ -176,10 +176,6 @@ public class UI : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.01f);
         anim.Play("Death_UI_Fade_In");
     }
-    public void Quit()
-    {
-        Application.Quit();
-    }
     private void FreezePlayer()
     {
         player_attack.enabled = false;
@@ -260,7 +256,7 @@ public class UI : MonoBehaviour
                     GoToMainMenu();
                     break;
                 case 2:
-                    Quit();
+                    Restart();
                     break;
             }
         }
@@ -272,12 +268,16 @@ public class UI : MonoBehaviour
                     GoToMainMenu();
                     break;
                 case 1:
-                    Quit();
+                    Restart();
                     break;
             }
         }
     }
-    
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     }
 
 

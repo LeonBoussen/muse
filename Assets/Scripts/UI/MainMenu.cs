@@ -13,7 +13,12 @@ public class MainMenu : MonoBehaviour
     public GameObject Controls_Screen;
 
     private bool control_Screen_on;
+    private SoundManagerScript soundmanager;
 
+    private void Start()
+    {
+        soundmanager = FindObjectOfType<SoundManagerScript>();
+    }
     private void Update()
     {
         if (Input.GetKeyDown("joystick button 1"))
@@ -28,7 +33,7 @@ public class MainMenu : MonoBehaviour
             }
         }
         var keypadY = Input.GetAxis("Keypad_Y");
-        if (!dpad_used)
+        if (!dpad_used && !control_Screen_on)
         {
             if (keypadY > 0.8f || keypadY < -0.8f)
             {
@@ -39,7 +44,12 @@ public class MainMenu : MonoBehaviour
     }
     public void Play()
     {
+        SoundManagerScript soundmanager = FindObjectOfType<SoundManagerScript>();
+        soundmanager.StopMusic();
+        soundmanager.PlayedMusic = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(soundmanager.BGM_Music());
+
     }
     public void Controls()
     {
@@ -75,22 +85,32 @@ public class MainMenu : MonoBehaviour
     }
     private void SelectOption()
     {
-        switch (selectedItem)
+        if (control_Screen_on)
         {
-            case 0:
-                Play();
-                break;
-            case 1:
-                Controls();
-                break;
+            return;
+        }
+        else
+        {
+            soundmanager.PlaySFX(3);
+            switch (selectedItem)
+            {
+                case 0:
+                    Play();
+                    break;
+                case 1:
+                    Controls();
+                    break;
+            }
         }
     }
     private void SetOutline()
     {
+        soundmanager.PlaySFX(2);
         outline.transform.position = buttons[selectedItem].transform.position;
     }
     public void ExitControls_Screen()
     {
+        soundmanager.PlaySFX(3);
         Controls_Screen.SetActive(false);
         control_Screen_on = false;
     }

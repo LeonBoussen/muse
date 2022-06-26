@@ -11,14 +11,18 @@ public class PlayerAttack : MonoBehaviour
     public GameObject attackpoint;
     public float attack_damage;
     private PlayerMovement movementscript;
+    private AudioSource playersource;
+    private SoundManagerScript soundmanager;
     private void Start()
     {
+        playersource = GetComponent<AudioSource>();
+        soundmanager = FindObjectOfType<SoundManagerScript>();
         movementscript = GetComponent<PlayerMovement>();
         anim = GetComponent<Animator>();
     }
     private void Update()
     {
-        if (!isCoolDown && Input.GetKeyDown("joystick button 2"))
+        if (!isCoolDown && Input.GetKeyDown("joystick button 2") || Input.GetMouseButtonDown(0))
         {
             Attack();
             StartCoroutine(CoolDown(0.5f));
@@ -39,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 movementscript.sprite.flipX = false;
             }*/
+            soundmanager.PlayPlayerSFX(playersource, 1);
             movementscript.PlayAnim("Player_Attack");
             Collider2D[] hitenemies = Physics2D.OverlapCircleAll(attackpoint.transform.position, range, enemylayer);
             foreach (Collider2D enemy in hitenemies)

@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     public Collider2D collision_collider;
     private PlayerCheck player_check;
     public SpriteRenderer sprite;
+    private SoundManagerScript soundmanager;
+    private AudioSource enemysource;
 
     public bool isMoving = false;
     private bool overideanimation = false;
@@ -44,6 +46,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        soundmanager = FindObjectOfType<SoundManagerScript>();
+        enemysource = GetComponent<AudioSource>();
         player_check = GetComponentInChildren<PlayerCheck>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
@@ -166,10 +170,12 @@ public class Enemy : MonoBehaviour
             PlayAnimation(3);
             StartCoroutine(MovingCooldown(.5f));
             StartCoroutine(Anim_Cooldown());
+            StartCoroutine(TakeDamageSFX());
         }
     }
     private void Die()
     {
+        soundmanager.PlayEnemySFX(enemysource, 2);
         PlayAnimation(4);
         StartCoroutine(Anim_Cooldown());
         attack_collider.enabled = false;
@@ -225,6 +231,7 @@ public class Enemy : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(1f);
             PlayAnimation(5);
+            soundmanager.PlayEnemySFX(enemysource, 5);
             PlayerHealthScript HealthScript = FindObjectOfType<PlayerHealthScript>();
             float a = HealthScript.health + 5;
             if (a < 105)
@@ -238,5 +245,11 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
         healthscript.health = healthscript.health - Damage;
+        soundmanager.PlayEnemySFX(enemysource, 1);
+    }
+    IEnumerator TakeDamageSFX()
+    {
+        yield return new WaitForSeconds(0.4f);
+        soundmanager.PlayEnemySFX(enemysource, 0);
     }
 }

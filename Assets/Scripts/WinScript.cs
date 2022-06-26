@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class WinScript : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     private PlayerMovement movement;
     private UI ui_script;
     public GameObject WinUI;
     public GameObject WinBackground;
 
-    private bool has_won = false;
+    public bool has_won = false;
 
     private void Start()
     {
@@ -28,13 +28,15 @@ public class WinScript : MonoBehaviour
     
     IEnumerator ActivateWinScreen()
     {
+
+        FindObjectOfType<SoundManagerScript>().PlaySFX(0);
         movement.enabled = false;;
         WinBackground.SetActive(true);
         ui_script.SlowDownTime();
         anim.Play("Win_Background_Fade_In");
         yield return new WaitForSecondsRealtime(1);
         WinUI.SetActive(true);
-        ui_script.outline.SetActive(true);
+        ui_script.EnableOutline();
         anim.Play("WinUI_Fade_In");
     }
 }

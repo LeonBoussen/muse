@@ -8,8 +8,10 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject player;
     public bool hasdied = false;
     private UI ui_script;
+    private AudioSource playersource;
     void Start()
     {
+        playersource = GetComponent<AudioSource>();
         ui_script = FindObjectOfType<UI>();
     }
 
@@ -23,6 +25,7 @@ public class PlayerHealthScript : MonoBehaviour
     }
     public void Die()
     {
+        FindObjectOfType<SoundManagerScript>().PlayPlayerSFX(playersource,2);
         ui_script.DeathScreen();
         hasdied = true;
     }

@@ -22,16 +22,19 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Update()
     {
-        if (!isCoolDown && Input.GetKeyDown("joystick button 2") || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("joystick button 2") || Input.GetMouseButtonDown(0))
         {
-            Attack();
-            StartCoroutine(CoolDown(0.5f));
+            if (!isCoolDown)
+            {
+                Attack();
+                StartCoroutine(CoolDown(0.5f));
+            }
         }
     }
     
     private void Attack()
     {
-        if (movementscript.IsGrounded())
+        if (movementscript.IsGrounded() && !movementscript.camera_on && !isCoolDown)
         {
             //var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
             /*

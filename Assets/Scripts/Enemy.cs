@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
         healthscript = FindObjectOfType<PlayerHealthScript>();
         rb = GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         if (enemyhealth <= 0 && !this.hasdied)
@@ -84,7 +83,6 @@ public class Enemy : MonoBehaviour
                 PlayAnimation(0);
             }
         }
-        
     }
     private void FixedUpdate()
     {
@@ -127,7 +125,6 @@ public class Enemy : MonoBehaviour
                 canAttack = true;
             }
         }
-        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -143,10 +140,7 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    /*void moveEnemy(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * Speed * Time.deltaTime));
-    }*/
+    
 
     void attack()
     {
@@ -157,7 +151,23 @@ public class Enemy : MonoBehaviour
             isMoving = false;
             StartCoroutine(MovingCooldown(.5f));
             StartCoroutine(Anim_Cooldown());
-            StartCoroutine(DoDamage(.2f));
+            if (!player.GetComponent<PlayerMovement>().isBlocking)
+            {
+                StartCoroutine(DoDamage(.2f));
+            }
+            switch (current_enemytype)
+            {
+                case enemytype.Beefsteak:
+                    soundmanager.BeefsteakSFX(enemysource, 1);
+                    break;
+                case enemytype.Chompstool:
+                    soundmanager.ChompstoolSFX(enemysource, 1);
+                    break;
+                default:
+                    soundmanager.PlayEnemySFX(enemysource, 1);
+                    break;
+            }
+            
             timer = 0.0f;
         }
     }
@@ -175,7 +185,15 @@ public class Enemy : MonoBehaviour
     }
     private void Die()
     {
-        soundmanager.PlayEnemySFX(enemysource, 2);
+        switch (current_enemytype)
+        {
+            case enemytype.Beefsteak:
+                soundmanager.BeefsteakSFX(enemysource, 2);
+                break;
+            default:
+                soundmanager.PlayEnemySFX(enemysource, 2);
+                break;
+        }
         PlayAnimation(4);
         StartCoroutine(Anim_Cooldown());
         attack_collider.enabled = false;
@@ -245,7 +263,6 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
         healthscript.health = healthscript.health - Damage;
-        soundmanager.PlayEnemySFX(enemysource, 1);
     }
     IEnumerator TakeDamageSFX()
     {

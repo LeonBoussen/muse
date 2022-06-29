@@ -2417,6 +2417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9563bcf9bb4bf2a4ab9a4cec05908efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordsounds:
+  - {fileID: 8300000, guid: bfb7176df41f5ac4ebc6c110defc6d43, type: 3}
+  - {fileID: 8300000, guid: db5963e1a14d0624c93489f9e7f6cd26, type: 3}
+  - {fileID: 8300000, guid: ecef81fe9f869e94780ecbc7f8db320e, type: 3}
   EnemySounds:
   - {fileID: 8300000, guid: b9182dd8c7ce334479b2b3597c6b318d, type: 3}
   - {fileID: 8300000, guid: 6ba7d8d9dcf93cb419efdf74bdb09cca, type: 3}
@@ -2424,12 +2428,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 8300000, guid: 70a8c7c076211dc4583fea09b26a4905, type: 3}
+  Beefsteaksounds:
+  - {fileID: 8300000, guid: 93805f93393c7a44382bc4a634dc28e5, type: 3}
+  - {fileID: 8300000, guid: 6cd5da9eea46f204381503c5a3f07846, type: 3}
+  Chompstoolsounds:
+  - {fileID: 8300000, guid: 706931417a59e0b45bc196354530934a, type: 3}
+  - {fileID: 8300000, guid: 1a1fcd5efab5e5f4e810ce1350197a1b, type: 3}
+  - {fileID: 8300000, guid: e0aed177b3e6e2e4b87ca3da5a8ef46f, type: 3}
+  - {fileID: 8300000, guid: 34c0d35d33cf0d845a4b77eed203d151, type: 3}
+  - {fileID: 8300000, guid: 4281df65205cc404bb4f652cf0945b88, type: 3}
   PlayerSounds:
   - {fileID: 8300000, guid: ba85b372cab7ca44d909e21005b82c2a, type: 3}
   - {fileID: 8300000, guid: b799ef61b3a3a5f499a50d20199fa793, type: 3}
   - {fileID: 8300000, guid: ffb016c49720ac249983b87c570d4efd, type: 3}
   - {fileID: 8300000, guid: 241d4d7a9510ec54ab041d4eb07f8a67, type: 3}
   - {fileID: 8300000, guid: 70d74f530ebc38a40a97e7a2ec344c27, type: 3}
+  - {fileID: 8300000, guid: e49e2c57372cc7a4cade88a69df5b91d, type: 3}
   BGM:
   - {fileID: 8300000, guid: 5ad7f07ceee2bd340a855033cb069f57, type: 3}
   - {fileID: 8300000, guid: 9c92d14eaeeb72545a54d125dd563158, type: 3}

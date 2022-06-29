@@ -8,7 +8,10 @@ public class SoundManagerScript : MonoBehaviour
 {
     private static SoundManagerScript SoundManager;
 
+    public AudioClip[] swordsounds;
     public AudioClip[] EnemySounds;
+    public AudioClip[] Beefsteaksounds;
+    public AudioClip[] Chompstoolsounds;
     public AudioClip[] PlayerSounds;
     public AudioClip[] BGM;
     public AudioClip[] SFX;
@@ -58,18 +61,45 @@ public class SoundManagerScript : MonoBehaviour
         bgmSource.Stop();
 
     }
-    public void PlayPlayerSFX(AudioSource playersource, int position) // 0 = walk | 1 = attack | 2 = death | 3 = jump | 4 = camera
+    public void PlayPlayerSFX(AudioSource playersource, int pos) // 0 = walk | 1 = attack | 2 = death | 3 = jump | 4 = camera | 5 = block
     {
-        playersource.clip = PlayerSounds[position];
+        if (pos == 1)
+        {
+            playersource.clip = swordsounds[Random.Range(0, swordsounds.Length)];
+        }
+        else
+        {
+            playersource.clip = PlayerSounds[pos];
+        }
         playersource.volume = SFXVolume;
         playersource.PlayOneShot(playersource.clip);
     }
-    public void PlayEnemySFX(AudioSource enemysource, int position) // 0 = hit | 1 = attack | 2 = death | 3 = walk | 4 = idle |5 = morph
+    public void PlayEnemySFX(AudioSource enemysource, int pos) // 0 = hit | 1 = attack | 2 = death | 3 = walk | 4 = idle |5 = morph
     {
-        enemysource.clip = EnemySounds[position];
+        enemysource.clip = EnemySounds[pos];
         enemysource.volume = SFXVolume;
         enemysource.PlayOneShot(enemysource.clip);
     }
+    public void BeefsteakSFX(AudioSource enemysource, int pos) // | 1 = attack | 2 = death 
+    {
+        enemysource.clip = Beefsteaksounds[pos];
+        enemysource.volume = SFXVolume;
+        enemysource.PlayOneShot(enemysource.clip);
+    }
+    public void ChompstoolSFX(AudioSource enemysource, int pos) //  | 1 = attack | 2 = death
+    {
+        if (pos == 1)
+        {
+            enemysource.clip = Chompstoolsounds[Random.Range(0,Chompstoolsounds.Length-1)];
+        }
+        else if (pos == 2)
+        {
+            enemysource.clip = EnemySounds[3];
+        }
+        enemysource.volume = SFXVolume;
+        enemysource.PlayOneShot(enemysource.clip);
+    }
+    
     public void PlaySFX(int pos) // 0 = win sound | 1 = death sound | 2 = UI button hover | 3 = UI button click
     {
         sfxSource.clip = SFX[pos];
@@ -79,7 +109,7 @@ public class SoundManagerScript : MonoBehaviour
    
     public IEnumerator MainMenuMusic()
     {
-        while (true)
+        while (true && SceneManager.GetActiveScene().buildIndex == 0 && !bgmSource.isPlaying)
         {
             bgmSource.volume = BGMVolume;
             bgmSource.PlayOneShot(BGM[0]);
@@ -88,7 +118,7 @@ public class SoundManagerScript : MonoBehaviour
     }
     public IEnumerator BGM_Music()
     {
-        while (true)
+        while (true && SceneManager.GetActiveScene().buildIndex == 1 && !bgmSource.isPlaying)
         {
             bgmSource.volume = BGMVolume;
             bgmSource.PlayOneShot(BGM[1]);

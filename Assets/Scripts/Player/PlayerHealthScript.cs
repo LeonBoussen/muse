@@ -29,4 +29,5 @@ public class PlayerHealthScript : MonoBehaviour
         ui_script.DeathScreen();
         hasdied = true;
     }
+    
 }

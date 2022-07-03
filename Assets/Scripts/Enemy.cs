@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
         {
             if (isMoving)
             {
-                if (current_enemytype != enemytype.Happie && current_enemytype != enemytype.Hollorch && current_enemytype != enemytype.Daisyclaw)
+                if (current_enemytype != enemytype.Happie && current_enemytype != enemytype.Hollorch && current_enemytype != enemytype.Daisyclaw && current_enemytype != enemytype.Spinnygurl)
                 {
                     PlayAnimation(1);
                 }

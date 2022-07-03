@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 68614fdafbadf6f4180890bd6fc15cef, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 2.3, y: 2.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1723100183140229234
@@ -132,12 +132,12 @@ MonoBehaviour:
   sprite: {fileID: 1723100183140229233}
   isMoving: 0
   Animations:
-  - {fileID: 7400000, guid: c57bca2a33a2e9c4e9576bb913e135d6, type: 2}
-  - {fileID: 7400000, guid: 0563a2d5a900bf74989f2de667799d34, type: 2}
-  - {fileID: 7400000, guid: bae04fb5d5e44bc4f8ae2013b65ca8dd, type: 2}
-  - {fileID: 7400000, guid: 5ccd5733caadbd74f81a35702b392ec3, type: 2}
-  - {fileID: 7400000, guid: 1409ad1c1a46f2b4bb4732713ead0fd3, type: 2}
-  - {fileID: 7400000, guid: 518bd6a4284cb10449cdfd5ec73b942b, type: 2}
+  - {fileID: 7400000, guid: bd6260face70ccf428016dd721705da1, type: 2}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 032c6ff6f278fe3459d5cbd8e9db6a5d, type: 2}
+  - {fileID: 7400000, guid: fb374fed44335d841a4ae2e6df5e90f9, type: 2}
+  - {fileID: 7400000, guid: 7a310e11ca62e6c4289b61fa20af3723, type: 2}
+  - {fileID: 7400000, guid: 0a071a3c63a3e11479bcda9ca1de7c22, type: 2}
   current_enemytype: 0
   Speed: 2.5
 --- !u!50 &2164651240942642580
@@ -198,7 +198,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.38, y: 10.8}
+    oldSize: {x: 3.84, y: 2.85}
     newSize: {x: 2.3, y: 2.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

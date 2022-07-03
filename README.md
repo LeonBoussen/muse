@@ -37,8 +37,8 @@ Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en 
 | Online Product backlog & Sprint backlog + DoD (Trello)    | [Backlog]
 | Sprint retrospective verslagen (pdf)                      | [RetrospectiveVerslagen]
 | Logboek (pdf)                                             | [Logboek]
-| Opnames sprint retrospectives (logboek)             | [logboek]
-| Opnames standups (logboek)                          | [logboek]
+| sprint retrospectives (pdf)             	      | [RetrospectiveVerslagen]
+| Daily standups (logboek)                            | [logboek]
 |<img width=500/>|<img width=300/>|
    
 #### Producten Werkproces 3
@@ -54,7 +54,7 @@ Wij hebben besloten om een 2D platformer game te maken met als thema bloemen en 
    [Backlog]: <https://trello.com/b/I1SIPGEh/muse>
    [Logboek]: <https://docs.google.com/document/d/1xSiogelaksRjjSInm0Ac0FjJyGwVzRekr1tUf6I5WW4/edit>
    [GameDesignDoc]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/GAME_CONCEPT_DOCUMENT.docx>
-   [RetrospectiveVerslagen]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Gedocumenteerde_Sprint_Retrospective.docx>
+   [RetrospectiveVerslagen]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Retrospectives.docx>
    [ReviewVerslagen]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Gedocumenteerde_Game_sprint_review.docx>
    [Prototype]: <https://danielnijkamp.xyz/Builds/Muse.html>
    [AssetPlanning]: <https://github.com/LeonBoussen/muse/blob/main/Documenten/Design_proces_en_ontwikkeling.docx>
